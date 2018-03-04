@@ -36,6 +36,18 @@ require('./server/routes/project')(app);
 require('./server/routes/milesstone')(app);
 require('./server/routes/tasklist')(app);
 
+
+// code to push production
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+    const path = require("path");
+    app.get('*', (req, res) => {
+       res.sendfile(path.resolve(__dirname,'client','build','index.html'));
+    });
+ }
+ 
+
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log('----------running------');

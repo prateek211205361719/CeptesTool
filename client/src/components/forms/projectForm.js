@@ -120,9 +120,11 @@ class ProjectForm extends Component{
 
   renderContent(){
     
-     return fields.map((item) => {
+     return fields.map((item, index) => {
         return(
-           <Field showTime={item.showTime} classProp={item.class} label={item.label} type={item.type} name={item.name}  data={this.props.users} component={item.component} /> 
+          
+          <Field showTime={item.showTime} classProp={item.class} label={item.label} type={item.type} name={item.name}  data={this.props.users} component={item.component} /> 
+            
         );
      });
   }

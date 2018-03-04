@@ -1,23 +1,27 @@
 
 
 import React,{ Component } from 'react';
-import BlockHeader from './blockHeader';
-import UserCard from './projectDashboardChild/userCard';
+import BlockHeader from './BlockHeader';
+import UserCard from './projectDashboardChild/UserCard';
 import {connect} from 'react-redux';
 import * as action from '../actions';
+
+
 class ProjectDashboard extends Component{
    
     componentDidMount(){
-        
+        var projectId = this.props.match.params.id;
+        var selectedProject =  this.props.project.filter(item => item._id ===  projectId)[0];
+        this.props.selectedProject(selectedProject);
     }
 
     render(){
        var projectId = this.props.match.params.id;
-       var selectedProject =  this.props.project.filter(item => item._id ==  projectId)[0];
-       this.props.selectedProject(selectedProject);
+       var selectedProject =  this.props.project.filter(item => item._id ===  projectId)[0];
+      
        return(
             <section className="content">
-                    <BlockHeader header={selectedProject.name} />
+                    <BlockHeader header={selectedProject.name} subHeader="Dashboard" />
                     <div className="container-fluid">
                         <div className="row clearfix">
                             <div className="col-lg-8 col-md-12 col-sm-12">
@@ -39,6 +43,8 @@ class ProjectDashboard extends Component{
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="row clearfix">
                         </div>
                     </div>
                 </section>

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 class UserCard extends Component{
    
     renderContent(){
-       return this.props.users.map((user) => {
+       return this.props.users.map((user, index) => {
             return(
-                <li className="inbox-inner">
+                <li key={`userCard${index}`} className="inbox-inner">
                     <Link to={`/user/${user._userId}`}>
                         <div className="inbox-item">
                             <div className="inbox-img"> <img src={user.photo} alt={user.name} /> </div>

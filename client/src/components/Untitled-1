@@ -1,7 +1,0 @@
- <div>
-                            <label>Hobbies</label>
-                            <Field
-                            name="hobbies"
-                            component={renderMultiselect}
-                             data={[ 'Guitar', 'Cycling', 'Hiking' ]}/>
-                        </div>

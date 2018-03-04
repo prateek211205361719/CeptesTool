@@ -15,7 +15,29 @@
     <link rel="stylesheet" href="/css/skin.css" />
     <link rel="stylesheet" href="/css/html-style.css" />
     <link rel="stylesheet" href="/css/auth.css" />
+    <link rel="stylesheet" href="/css/footable.css" />
     <style>
+        @media only screen and (max-width: 800px) {
+          .table tr{
+            border-top:1px solid #eceeef;
+          }
+          .table td{
+            border-top:0 !important;
+          }
+          table {
+             border-collapse: collapse;
+          }
+          td{
+            display: table-row !important;
+            line-height: 50px;
+          }
+          th{
+           display:none;
+          }
+          .footable-details.table-striped>tbody>tr:nth-child(odd), .footable.table-striped>tbody>tr:nth-child(odd){
+            background: white !important;
+          }
+        }
         .navbar{
           width:100%;
         }

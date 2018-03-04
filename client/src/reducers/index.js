@@ -6,11 +6,13 @@ import { reducer as formReducer } from 'redux-form';
 import formRefresh from './formRefresh';
 import selectedProject from './selectedProject';
 import users from './users';
+import milesstone from  './milesstone.js';
 export default combineReducers({
     auth,
     project,
     form: formReducer,
     refreshForm:formRefresh,
     selectedProject,
-    users
+    users,
+    milesstoneList: milesstone
 });

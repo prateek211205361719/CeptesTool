@@ -1,16 +1,19 @@
 
 import React,{ Component } from 'react';
-import Login from './components/login';
-import Header from './components/header';
-import MenuHeader from './components/menuHeader';
-import Sidebar from './components/sidebar';
-import Home from './components/home';
-import UserDashboard from './components/userdashboard';
+import Login from './components/Login';
+import Header from './components/Header';
+import MenuHeader from './components/MenuHeader';
+import Sidebar from './components/Sidebar';
+import Home from './components/Home';
+import Milesstone from './components/Milesstone.js';
+import UserDashboard from './components/UserDashboard';
+import ProjectDashboard from  './components/projectDashboard';
+
 import { compose} from 'redux';
 import { connect } from 'react-redux';
-import ProjectDashboard from  './components/projectDashboard';
 import { BrowserRouter,Route, Redirect,Switch,withRouter } from 'react-router-dom';
 import * as action from './actions';
+
 class App extends Component{
     componentDidMount(){
         this.props.isLogin();
@@ -28,7 +31,8 @@ class App extends Component{
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/user/:id"  component={UserDashboard} exact={true} />
                     <Route path="/project/:id"  component={ProjectDashboard} exact={true} />
-                  
+                    <Route path="/milesstone"  component={Milesstone} exact={true} />
+                    
                </div>
             </BrowserRouter>
         );

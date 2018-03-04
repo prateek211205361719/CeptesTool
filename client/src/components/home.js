@@ -1,7 +1,7 @@
 
 import React,{ Component } from 'react';
 import { connect } from 'react-redux';
-import BlockHeader from './blockHeader';
+import BlockHeader from './BlockHeader';
 import * as action from '../actions';
 class Home extends Component{
     componentDidMount(){

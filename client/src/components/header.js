@@ -1,8 +1,8 @@
 
 import React,{Component} from 'react';
-import Notification from './header-child/notification';
-import HeaderProject from './header-child/project';
-import ImageModal from './header-child/imageModal';
+import Notification from './header-child/Notification';
+import HeaderProject from './header-child/HeaderProject';
+import ImageModal from './header-child/ImageModal';
 import { connect } from 'react-redux';
 import * as action from '../actions';
 class Header extends Component{
@@ -82,8 +82,8 @@ class Header extends Component{
                         </div>
                     </li>
                     <li className="float-right" style={{"position":"relative"}}>
-                            <a href="#" class="imagePopover" onClick={(ev) => this.showDropdown(ev)}>
-                                 {this.props.auth ? <img class="imagePopover"  style={{"width":"50px","borderRadius":"50%"}} width="30" src={this.props.auth.photo} alt="" /> : ''} 
+                            <a href="#" className="imagePopover" onClick={(ev) => this.showDropdown(ev)}>
+                                 {this.props.auth ? <img className="imagePopover"  style={{"width":"50px","borderRadius":"50%"}} width="30" src={this.props.auth.photo} alt="" /> : ''} 
                             </a>
                            <ImageModal userID={this.props.auth != null ? this.props.auth._id : ''} name={this.props.auth != null ? this.props.auth.name : ''} email={this.props.auth != null ? this.props.auth.email : ''} image={this.props.auth != null ? this.props.auth.photo : ''} />
                      </li>

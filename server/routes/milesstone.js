@@ -1,10 +1,11 @@
 
 
-const { Milestone }  = require('../models/milesstone');
+const { Milesstones }  = require('../models/milesstone');
 module.exports = (app) => {
-    app.get('/api/milestone', async (req, res) => {
+    app.get('/api/milestone/:projectId', async (req, res) => {
         try{
-            var milestoneList = await Milestone.find();
+            var projectId = req.params.projectId;
+            var milestoneList = await Milesstones.find();
             if(!milestoneList)
                 return res.status(400).send();
             res.send(milestoneList);

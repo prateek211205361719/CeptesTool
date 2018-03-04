@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 class MenuHeader extends Component{
     
     renderContent(){
-        var projects = this.props.project;
-        return projects.map((item) => {
+        /*var projects = this.props.project;
+        return projects.map((item, index) => {
              return (
-                <li>
+                <li key={`menuheaderproject${index}`}>
                     <Link to={`/project/${item._id}`}>{item.name}</Link> 
                  </li>
             );
-        });
+        });*/
     }
     render(){
        
@@ -23,16 +23,14 @@ class MenuHeader extends Component{
                 <div className="menu">
                     <ul className="pullDown">
                         <li className="menu-dropdown-icon">
-                            <a href="#">Dashboard</a>
+                            <Link to={`/project/${this.props.selectedProject._id}`}>Dashboard</Link>
                         </li>
                         <li className="menu-dropdown-icon">
-                            <a href="#">Projects</a>
-                            <ul className="pullDown normal-sub">
-                                {this.renderContent()}
-                             </ul>
+                            <Link to="/milesstone">Milesstone</Link>
                         </li>
                         <li className="menu-dropdown-icon">
-                            <a href="">Task</a>
+                             <Link to="/">Task</Link>
+                        
                         </li>
                     </ul>
                 </div>
@@ -43,7 +41,8 @@ class MenuHeader extends Component{
 
 function mapStateToProps(state){
     return {
-        project: state.project
+        project: state.project,
+        selectedProject: state.selectedProject
     }
 }
 export default connect(mapStateToProps, null)(MenuHeader);

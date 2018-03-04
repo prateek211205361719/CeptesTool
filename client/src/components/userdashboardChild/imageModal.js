@@ -22,7 +22,7 @@ class ImageModal extends Component{
         return(
             <div id="myModal" className="modal">
                 <span onClick={this.closeModal.bind(this)} className="close1">&times;</span>
-                <img className="modal-content" id="img01" />
+                <img className="modal-content" id="img01"  />
                 
             </div>
         );

@@ -45,7 +45,7 @@ const MilesstoneSchema = Schema({
     
 });
 
-const Milestone = mongoose.model('Milestone', MilesstoneSchema);
+const Milesstones  = mongoose.model('milesstones', MilesstoneSchema);
 module.exports = {
-    Milestone
+    Milesstones
 };

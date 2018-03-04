@@ -10,7 +10,7 @@ class Notification extends Component{
                         <li>
                             <a href="javascript:void(0);">
                                 <div className="media">
-                                <img className="media-object" src="assets/images/xs/avatar2.jpg" alt />
+                                <img className="media-object" src="assets/images/xs/avatar2.jpg"  />
                                 <div className="media-body">
                                     <span className="name">Sophia <span className="time">30min ago</span></span>
                                     <span className="message">There are many variations of passages</span>                                        
@@ -21,7 +21,7 @@ class Notification extends Component{
                         <li>
                             <a href="javascript:void(0);">
                                 <div className="media">
-                                <img className="media-object" src="assets/images/xs/avatar3.jpg" alt />
+                                <img className="media-object" src="assets/images/xs/avatar3.jpg"  />
                                 <div className="media-body">
                                     <span className="name">Sophia <span className="time">31min ago</span></span>
                                     <span className="message">There are many variations of passages of Lorem Ipsum</span>                                        
@@ -32,7 +32,7 @@ class Notification extends Component{
                         <li>
                             <a href="javascript:void(0);">
                                 <div className="media">
-                                <img className="media-object" src="assets/images/xs/avatar4.jpg" alt />
+                                <img className="media-object" src="assets/images/xs/avatar4.jpg"  />
                                 <div className="media-body">
                                     <span className="name">Isabella <span className="time">35min ago</span></span>
                                     <span className="message">There are many variations of passages</span>                                        
@@ -43,7 +43,7 @@ class Notification extends Component{
                         <li>
                             <a href="javascript:void(0);">
                                 <div className="media">
-                                <img className="media-object" src="assets/images/xs/avatar5.jpg" alt />
+                                <img className="media-object" src="assets/images/xs/avatar5.jpg"  />
                                 <div className="media-body">
                                     <span className="name">Alexander <span className="time">35min ago</span></span>
                                     <span className="message">Contrary to popular belief, Lorem Ipsum random</span>                                        
@@ -54,7 +54,7 @@ class Notification extends Component{
                         <li>
                             <a href="javascript:void(0);">
                                 <div className="media">
-                                <img className="media-object" src="assets/images/xs/avatar6.jpg" alt />
+                                <img className="media-object" src="assets/images/xs/avatar6.jpg"  />
                                 <div className="media-body">
                                     <span className="name">Grayson <span className="time">1hr ago</span></span>
                                     <span className="message">There are many variations of passages</span>                                        

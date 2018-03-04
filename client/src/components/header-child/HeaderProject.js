@@ -2,15 +2,15 @@
 
 import React,{Component} from 'react';
 import { connect }  from 'react-redux';
+import { Link } from 'react-router-dom';
 class HeaderProject extends Component{
     
    
     renderContent(){
-        console.log(this.props.project);
-        return this.props.project.map((item) => {
+        return this.props.project.map((item, index) => {
             return(
-                <li key={`projectkey${item.name}`}>
-                    <a href="javascript:void(0);">
+                <li key={`projectjskey${index}`}>
+                    <Link  to={`/project/${item._id}`}>
                         <div className="progress-container progress-primary">
                             <span className="progress-badge">{item.name}</span>
                             <div className="progress">
@@ -19,16 +19,16 @@ class HeaderProject extends Component{
                                 </div>
                             </div>      
                             <div>
-                                 <p class="m-r-15"><small class="text-muted">Team</small></p>
+                                 <p className="m-r-15"><small className="text-muted">Team</small></p>
                             </div>                  
                             <ul className="list-unstyled team-info">
                              
                                { 
-                                 item.Users.map((user) => <li><img src={user.photo} /></li>)
+                                 item.Users.map((user,index) => <li key={`projectjskeyUser${index}`}><img src={user.photo} /></li>)
                                }
                             </ul>
                         </div>
-                    </a>
+                    </Link>
                  </li>
             );
         });

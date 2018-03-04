@@ -1,6 +1,6 @@
 
 import React,{Component} from 'react';
-import ImageModal from './userdashboardChild/imageModal';
+import ImageModal from './userdashboardChild/ImageModal';
 class BlockHeader extends Component{
     state = {showModal:false};
     showModal(){
@@ -14,8 +14,8 @@ class BlockHeader extends Component{
         return(
             <div className="col-lg-5 col-md-6 col-sm-12">
                 <div className="float-right m-l-10">
-                    <a href="#" onClick={this.showModal.bind(this)}>
-                     <img style={{"borderRadius":"50%"}} className="imagePopover" height="80" src={image} alt="" />
+                    <a href onClick={this.showModal.bind(this)}>
+                     <img style={{"borderRadius":"50%","cursor":"pointer"}} className="imagePopover" height="80" src={image} alt="" />
                     </a>
                 </div>
             </div>
@@ -36,14 +36,14 @@ class BlockHeader extends Component{
                 <div className="row">
                     <div className="col-lg-7 col-md-6 col-sm-12">
                         <h2>{this.props.header}
-                            <small>Dashboard</small>
+                            <small>{this.props.subHeader}</small>
                         </h2>
                     </div>
                     
                    {this.renderPhoto()}
                 
                 </div>
-                {this.state.showModal ? <ImageModal image={image} closeModal={this.closeModal.bind(this)} /> : ''}
+                {this.state.showModal ?  <ImageModal image={image} closeModal={this.closeModal.bind(this)} /> : ''}
             </div>
 
         );

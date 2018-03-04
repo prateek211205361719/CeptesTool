@@ -30,7 +30,7 @@ class ImageModal extends Component{
                                 <div>
                                 
                                    <Link to={`/user/${this.props.userID}`} style={{"padding":"10px 15px"}} className="btn btn-primary btn-round">Profile</Link>
-                                   <a href="/api/logout" style={{"padding":"10px 15px"}} class="btn btn-primary btn-round btn-simple">Logout</a>
+                                   <a href="/api/logout" style={{"padding":"10px 15px"}} className="btn btn-primary btn-round btn-simple">Logout</a>
                                 </div>
                             </div>
                         </div>
